@@ -22,7 +22,7 @@
       register: keygen
       failed_when: keygen.stderr != ''
       changed_when: false
-      nonsense
+      
     - name: fetch remote ssh key
       command: ssh-keyscan -T5 {{ inventory_hostname }}
       register: keyscan
